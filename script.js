@@ -1,7 +1,14 @@
-var array=[1,2,3,4]
+const fs = require('node:fs');
 
-
-var array1=array.map(function(val){
-    return(val+1);
+fs.appendFile("hello.txt","mynigga", function(err){
+    if(err) console.error(err); 
+    else console.log("done");
 })
-console.log(array1);
+fs.rename("hello.txt","dhankuta.txt",function(err){
+    if(err) console.error("youtube");
+    else console.log("china")
+})
+fs.copyFile("dhankuta.txt","./copy/copy.txt",function(err){
+    if(err) console.error(err); 
+    else console.log("done"); 
+})
