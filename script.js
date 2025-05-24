@@ -1,13 +1,10 @@
 const express = require('express')
 const app =express()
 
-app.get("/",function(req,res ,next){
-return next(new Error("something borke again"))
+app.get("/",function(req,res){
+res.send("helloworld");
 });
-app.use((err, req, res, next) => {
-  console.error(err.stack)
-  res.status(500).send('Something broke!')
-})
+
     
 
 
