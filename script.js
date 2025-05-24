@@ -3,4 +3,7 @@ const app =express()
 app.get('/',function (req,res){
     res.send('Helloworld')
 })
-app.listen(3000)
+app.get('/profile',function(req,res){
+    res.send('NBA yb')
+})
+app.listen(2828);
